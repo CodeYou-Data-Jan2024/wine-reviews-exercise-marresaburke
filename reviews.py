@@ -1,7 +1,7 @@
 import pandas as pd
 
 #Read in CSV file
-wine_reviews = pd.read_csv('.../data/winemag-data-130k-v2.csv.zip', index_col = 0)
+wine_reviews = pd.read_csv('../data/winemag-data-130k-v2.csv.zip', index_col = 0)
 
 #Find how many reviews per country
 data_wine = wine_reviews.country.value_counts()
@@ -14,10 +14,10 @@ country_avg
 
 compliled = pd.DataFrame({'count': data_wine, 'points': country_avg})
 final_data = compliled.sort_values('count', ascending= 0)
-final_data
 
 #Save new dataframe to new csv file
 final_data.to_csv('reviews-per-country.csv')
+
 
 
 
